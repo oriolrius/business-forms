@@ -451,6 +451,26 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
         </InlineFieldRow>
       )}
 
+      {isFormElementType(element, FormElementType.NUM_INPUT_NO_LIMITS) && (
+        <InlineFieldRow>
+          <InlineField label="Vertical Buttons" labelWidth={14}>
+            <RadioButtonGroup
+              options={[
+                { label: 'Horizontal', value: false },
+                { label: 'Vertical', value: true },
+              ]}
+              value={element.verticalButtons || false}
+              onChange={(value) => {
+                onChange({
+                  ...element,
+                  verticalButtons: value,
+                });
+              }}
+            />
+          </InlineField>
+        </InlineFieldRow>
+      )}
+
       {(isFormElementType(element, FormElementType.DATETIME) || isFormElementType(element, FormElementType.DATE)) && (
         <>
           <ElementDateEditor

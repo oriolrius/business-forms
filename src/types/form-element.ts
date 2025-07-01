@@ -297,6 +297,13 @@ export interface NumberOptions {
   step?: number;
 
   /**
+   * Button Layout - true for vertical (up/down), false for horizontal (left/right)
+   *
+   * @type {boolean}
+   */
+  verticalButtons?: boolean;
+
+  /**
    * Value
    *
    * @type {number | null}

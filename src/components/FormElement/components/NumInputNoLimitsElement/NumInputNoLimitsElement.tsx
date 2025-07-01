@@ -64,6 +64,8 @@ export const NumInputNoLimitsElement: React.FC<Props> = ({ element, onChange, hi
     (element.min !== undefined && currentValue < element.min) ||
     (element.max !== undefined && currentValue > element.max);
 
+  const isVertical = element.verticalButtons || false;
+
   return (
     <InlineField
       label={element.title}
@@ -74,15 +76,15 @@ export const NumInputNoLimitsElement: React.FC<Props> = ({ element, onChange, hi
       disabled={element.disabled}
       className={applyLabelStyles(element.labelBackground, element.labelColor)}
     >
-      <div className={styles.container}>
+      <div className={isVertical ? styles.containerVertical : styles.container}>
         <Button
           variant="secondary"
           size="sm"
-          onClick={decreaseValue}
+          onClick={isVertical ? increaseValue : decreaseValue}
           disabled={element.disabled}
-          className={styles.decreaseButton}
+          className={isVertical ? styles.decreaseButtonVertical : styles.decreaseButton}
         >
-          -
+          {isVertical ? '▲' : '-'}
         </Button>
         <Input
           value={formatNumberValue(element.value)}
@@ -91,18 +93,22 @@ export const NumInputNoLimitsElement: React.FC<Props> = ({ element, onChange, hi
             handleValueChange(value);
           }}
           type="number"
-          className={`${highlightClass(element)} ${styles.input} ${isOutOfRange ? styles.inputOutOfRange : ''}`}
+          className={`${highlightClass(element)} ${
+            isVertical 
+              ? (isOutOfRange ? `${styles.inputVertical} ${styles.inputOutOfRangeVertical}` : styles.inputVertical)
+              : (isOutOfRange ? `${styles.input} ${styles.inputOutOfRange}` : styles.input)
+          }`}
           width={applyWidth(element.width)}
           data-testid={TEST_IDS.formElements.fieldNumInputNoLimits}
         />
         <Button
           variant="secondary"
           size="sm"
-          onClick={increaseValue}
+          onClick={isVertical ? decreaseValue : increaseValue}
           disabled={element.disabled}
-          className={styles.increaseButton}
+          className={isVertical ? styles.increaseButtonVertical : styles.increaseButton}
         >
-          +
+          {isVertical ? '▼' : '+'}
         </Button>
       </div>
     </InlineField>

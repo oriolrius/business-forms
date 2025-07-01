@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import {
   CODE_DEFAULT,
   CUSTOM_BUTTON_DEFAULT,
-  NUMBER_DEFAULT,
   NUM_INPUT_NO_LIMITS_DEFAULT,
+  NUMBER_DEFAULT,
   OptionsSource,
   SELECT_DEFAULT,
   SLIDER_DEFAULT,
