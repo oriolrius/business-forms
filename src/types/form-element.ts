@@ -290,6 +290,13 @@ export interface NumberOptions {
   min?: number;
 
   /**
+   * Step Value
+   *
+   * @type {number}
+   */
+  step?: number;
+
+  /**
    * Value
    *
    * @type {number | null}

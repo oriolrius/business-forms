@@ -111,6 +111,14 @@ export const NUMBER_DEFAULT: NumberOptions = {
 };
 
 /**
+ * Num Input No Limits Defaults
+ */
+export const NUM_INPUT_NO_LIMITS_DEFAULT: NumberOptions = {
+  value: 0,
+  step: 0.1,
+};
+
+/**
  * Slider Defaults
  */
 export const SLIDER_DEFAULT: SliderOptions = {

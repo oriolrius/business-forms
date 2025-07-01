@@ -81,6 +81,7 @@ export const TEST_IDS = {
     fieldLabelWidth: 'data-testid form-elements-editor field-label-width',
     fieldNumberMax: 'data-testid form-elements-editor field-number-max',
     fieldNumberMin: 'data-testid form-elements-editor field-number-min',
+    fieldNumInputNoLimitsStep: 'data-testid form-elements-editor field-num-input-no-limits-step',
     options: 'data-testid form-elements-editor options',
     optionLabel: (value: unknown) => `data-testid form-elements-editor option-label-${value}`,
     optionContent: (value: unknown) => `data-testid form-elements-editor option-content-${value}`,

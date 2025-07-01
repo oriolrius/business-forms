@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: stretch;
+}
+
+.decreaseButton {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.increaseButton {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  background-color: red;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+.inputOutOfRange {
+  border: 2px solid red !important;
+  border-left: 2px solid red !important;
+  border-right: 2px solid red !important;
+}

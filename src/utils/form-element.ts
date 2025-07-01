@@ -7,6 +7,7 @@ import {
   CODE_DEFAULT,
   CUSTOM_BUTTON_DEFAULT,
   NUMBER_DEFAULT,
+  NUM_INPUT_NO_LIMITS_DEFAULT,
   OptionsSource,
   SELECT_DEFAULT,
   SLIDER_DEFAULT,
@@ -112,7 +113,7 @@ export const getElementWithNewType = (
     case FormElementType.NUM_INPUT_NO_LIMITS: {
       return {
         ...baseValues,
-        ...NUMBER_DEFAULT,
+        ...NUM_INPUT_NO_LIMITS_DEFAULT,
         type: newType,
       };
     }

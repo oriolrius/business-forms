@@ -431,6 +431,26 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
         </InlineFieldRow>
       )}
 
+      {isFormElementType(element, FormElementType.NUM_INPUT_NO_LIMITS) && (
+        <InlineFieldRow>
+          <InlineField label="Step" labelWidth={8}>
+            <Input
+              placeholder="0.1"
+              onChange={(event: ChangeEvent<HTMLInputElement>) => {
+                onChange({
+                  ...element,
+                  step: event.target.value ? Number(event.target.value) : 0.1,
+                });
+              }}
+              type="number"
+              width={10}
+              value={formatNumberValue(element.step || 0.1)}
+              data-testid={TEST_IDS.formElementsEditor.fieldNumInputNoLimitsStep}
+            />
+          </InlineField>
+        </InlineFieldRow>
+      )}
+
       {(isFormElementType(element, FormElementType.DATETIME) || isFormElementType(element, FormElementType.DATE)) && (
         <>
           <ElementDateEditor
