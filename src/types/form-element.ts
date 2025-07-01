@@ -20,6 +20,7 @@ export const enum FormElementType {
   LINK = 'link',
   MULTISELECT = 'multiselect',
   NUMBER = 'number',
+  NUM_INPUT_NO_LIMITS = 'numInputNoLimits',
   PASSWORD = 'password',
   RADIO = 'radio',
   SELECT = 'select',
@@ -606,6 +607,7 @@ export type FormElement = FormElementBase &
     | ({ type: FormElementType.COLOR_PICKER } & ColorPickerOptions)
     | ({ type: FormElementType.SLIDER } & SliderOptions)
     | ({ type: FormElementType.NUMBER } & NumberOptions)
+    | ({ type: FormElementType.NUM_INPUT_NO_LIMITS } & NumberOptions)
     | ({ type: FormElementType.TEXTAREA } & TextareaOptions)
     | ({ type: FormElementType.SELECT } & SelectOptions)
     | ({ type: FormElementType.MULTISELECT } & SelectOptions)

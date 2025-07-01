@@ -396,7 +396,7 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
         </InlineFieldRow>
       )}
 
-      {isFormElementType(element, FormElementType.NUMBER) && (
+      {(isFormElementType(element, FormElementType.NUMBER) || isFormElementType(element, FormElementType.NUM_INPUT_NO_LIMITS)) && (
         <InlineFieldRow>
           <InlineField label="Min" labelWidth={8}>
             <Input

@@ -109,6 +109,13 @@ export const getElementWithNewType = (
         type: newType,
       };
     }
+    case FormElementType.NUM_INPUT_NO_LIMITS: {
+      return {
+        ...baseValues,
+        ...NUMBER_DEFAULT,
+        type: newType,
+      };
+    }
     case FormElementType.CODE: {
       return {
         ...baseValues,
@@ -482,6 +489,7 @@ export const convertToElementValue = (
       };
     }
     case FormElementType.NUMBER:
+    case FormElementType.NUM_INPUT_NO_LIMITS:
     case FormElementType.SLIDER: {
       let newValue = typeof value === 'number' ? value : 0;
 

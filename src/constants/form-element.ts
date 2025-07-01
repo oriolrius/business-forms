@@ -49,6 +49,10 @@ export const FORM_ELEMENT_TYPE_OPTIONS: SelectableValue[] = [
     label: 'Number input',
   },
   {
+    value: FormElementType.NUM_INPUT_NO_LIMITS,
+    label: 'Num.Input NoLimits',
+  },
+  {
     value: FormElementType.SLIDER,
     label: 'Number slider',
   },

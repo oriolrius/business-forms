@@ -9,6 +9,7 @@ export * from './DisabledTextAreaElement';
 export * from './FileElement';
 export * from './LinkElement';
 export * from './NumberElement';
+export * from './NumInputNoLimitsElement';
 export * from './PasswordElement';
 export * from './RadioElement';
 export * from './SelectElement';

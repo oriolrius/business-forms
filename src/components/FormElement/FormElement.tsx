@@ -18,6 +18,7 @@ import {
   FileElement,
   LinkElement,
   NumberElement,
+  NumInputNoLimitsElement,
   PasswordElement,
   RadioElement,
   SelectElement,
@@ -103,6 +104,9 @@ export const FormElement: React.FC<Props> = ({
     switch (element.type) {
       case FormElementType.NUMBER: {
         return <NumberElement element={element} onChange={onChange} highlightClass={highlightClass} />;
+      }
+      case FormElementType.NUM_INPUT_NO_LIMITS: {
+        return <NumInputNoLimitsElement element={element} onChange={onChange} highlightClass={highlightClass} />;
       }
       case FormElementType.STRING: {
         return <StringElement element={element} onChange={onChange} highlightClass={highlightClass} />;

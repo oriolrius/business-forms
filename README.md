@@ -2,7 +2,7 @@
 
 ![Forms](https://raw.githubusercontent.com/volkovlabs/business-forms/main/src/img/panel.png)
 
-![Grafana](https://img.shields.io/badge/Grafana-11.5-orange)
+![Grafana](https://img.shields.io/badge/Grafana-12.0.2-orange)
 [![YouTube](https://img.shields.io/badge/YouTube-Playlist-red)](https://www.youtube.com/playlist?list=PLPow72ygztmRXSNBxyw0sFnnvNRY_CsSA)
 ![CI](https://github.com/volkovlabs/business-forms/workflows/CI/badge.svg)
 ![E2E](https://github.com/volkovlabs/business-forms/workflows/E2E/badge.svg)
@@ -17,7 +17,7 @@ The Business Forms panel is a conceptually new plugin for Grafana. It is the fir
 
 ## Requirements
 
-- Business Forms panel 4.X requires **Grafana 10.3** or **Grafana 11**.
+- Business Forms panel 5.X requires **Grafana 12** or higher.
 - Data Manipulation panel 3.X requires **Grafana 9** or **Grafana 10**.
 - Data Manipulation panel 2.X requires **Grafana 9** or **Grafana 8.5**.
 - Data Manipulation panel 1.X requires **Grafana 8**.

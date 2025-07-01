@@ -36,6 +36,7 @@ export const TEST_IDS = {
       `data-testid form-elements element-${elementId}-${elementType}`,
     default: 'data-testid form-elements default-none',
     fieldNumber: 'data-testid form-elements field-number',
+    fieldNumInputNoLimits: 'data-testid form-elements field-num-input-no-limits',
     fieldString: 'data-testid form-elements field-string',
     fieldFile: 'data-testid form-elements field-file',
     fieldColorPicker: 'data-testid form-elements field-color-picker',
