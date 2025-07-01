@@ -74,6 +74,7 @@ export const ElementQueryOptionsEditor: React.FC<Props> = ({ value, onChange, da
     <>
       <InlineFieldRow>
         <InlineField label="Value Field" grow={true}>
+          {/* eslint-disable-next-line deprecation/deprecation */}
           <Select
             options={availableFieldOptions.valueOptions}
             value={`${value?.source}:${value?.value}`}
@@ -97,6 +98,7 @@ export const ElementQueryOptionsEditor: React.FC<Props> = ({ value, onChange, da
       {value?.value && (
         <InlineFieldRow>
           <InlineField label="Label Field" grow={true}>
+            {/* eslint-disable-next-line deprecation/deprecation */}
             <Select
               options={availableFieldOptions.labelOptions}
               value={value.label}

@@ -53,6 +53,7 @@ export const InitialFieldsEditor: React.FC<Props> = ({ value, onChange, context 
                   data-testid={TEST_IDS.initialFieldsEditor.fieldNamePicker}
                 />
               ) : (
+                // eslint-disable-next-line deprecation/deprecation
                 <Select
                   value={element.queryField?.value}
                   options={queryFields}

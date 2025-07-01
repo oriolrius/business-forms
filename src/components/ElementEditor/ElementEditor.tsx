@@ -143,6 +143,7 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
 
       <InlineFieldRow>
         <InlineField label="Type" grow labelWidth={8}>
+          {/* eslint-disable-next-line deprecation/deprecation */}
           <Select
             options={FORM_ELEMENT_TYPE_OPTIONS}
             onChange={(event: SelectableValue) => {
@@ -329,6 +330,7 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
       {layoutSectionOptions.length > 0 && (
         <InlineFieldRow>
           <InlineField label="Section" grow labelWidth={8}>
+            {/* eslint-disable-next-line deprecation/deprecation */}
             <Select
               options={layoutSectionOptions}
               onChange={(event: SelectableValue) => {
@@ -513,6 +515,7 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
       {isFormElementType(element, FormElementType.CODE) && (
         <InlineFieldRow>
           <InlineField label="Language" grow labelWidth={10}>
+            {/* eslint-disable-next-line deprecation/deprecation */}
             <Select
               options={CODE_LANGUAGE_OPTIONS}
               onChange={(event: SelectableValue) => {
@@ -726,6 +729,7 @@ export const ElementEditor: React.FC<Props> = ({ element, onChange, onChangeOpti
             />
           </InlineField>
           <InlineField label="Icon" grow>
+            {/* eslint-disable-next-line deprecation/deprecation */}
             <Select
               options={iconOptions}
               isClearable

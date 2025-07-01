@@ -43,6 +43,7 @@ export const ElementOptionEditor: React.FC<Props> = ({ option, onChangeItem, ico
     <>
       <InlineFieldRow>
         <InlineField label="Type" labelWidth={6}>
+          {/* eslint-disable-next-line deprecation/deprecation */}
           <Select
             options={SELECT_ELEMENT_OPTIONS}
             onChange={(event: SelectableValue) => {
@@ -91,6 +92,7 @@ export const ElementOptionEditor: React.FC<Props> = ({ option, onChangeItem, ico
       <InlineFieldRow>
         {iconEnabled && (
           <InlineField label="Icon" labelWidth={6}>
+            {/* eslint-disable-next-line deprecation/deprecation */}
             <Select
               onChange={(event) => {
                 onChangeItem({

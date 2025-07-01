@@ -43,6 +43,7 @@ export const SelectElement: React.FC<Props> = ({ element, onChange, highlightCla
       disabled={element.disabled}
       className={applyLabelStyles(element.labelBackground, element.labelColor)}
     >
+      {/* eslint-disable-next-line deprecation/deprecation */}
       <Select
         key={element.id}
         isMulti={element.type === FormElementType.MULTISELECT}

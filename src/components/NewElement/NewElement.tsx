@@ -94,6 +94,7 @@ export const NewElement: React.FC<Props> = ({ onSave, elements, replaceVariables
       </InlineField>
 
       <InlineField label="Type" grow labelWidth={8}>
+        {/* eslint-disable-next-line deprecation/deprecation */}
         <Select
           aria-label={TEST_IDS.formElementsEditor.newElementType}
           options={FORM_ELEMENT_TYPE_OPTIONS}
