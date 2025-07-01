@@ -1,4 +1,4 @@
-import { MutableRefObject, useCallback, useRef, useState } from 'react';
+import { RefObject, useCallback, useRef, useState } from 'react';
 
 /**
  * Use Mutable State
@@ -6,7 +6,7 @@ import { MutableRefObject, useCallback, useRef, useState } from 'react';
  */
 export const useMutableState = <TValue>(
   initialValue: TValue
-): [TValue, (value: TValue) => void, MutableRefObject<TValue>] => {
+): [TValue, (value: TValue) => void, RefObject<TValue>] => {
   const [value, setValue] = useState(initialValue);
   const valueRef = useRef<TValue>(value);
 

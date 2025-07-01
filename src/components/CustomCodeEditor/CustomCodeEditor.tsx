@@ -2,10 +2,6 @@ import { StandardEditorProps } from '@grafana/data';
 import { getTemplateSrv } from '@grafana/runtime';
 import { CodeEditorSuggestionItem, CodeEditorSuggestionItemKind } from '@grafana/ui';
 import { AutosizeCodeEditor } from '@volkovlabs/components';
-/**
- * Monaco
- */
-import type * as monacoType from 'monaco-editor/esm/vs/editor/editor.api';
 import React, { useCallback } from 'react';
 
 import { CODE_EDITOR_SUGGESTIONS, TEST_IDS } from '../../constants';
@@ -33,9 +29,12 @@ export const CustomCodeEditor: React.FC<Props> = ({ value, item, onChange }) => 
   /**
    * Format On Mount
    */
-  const onEditorMount = (editor: monacoType.editor.IStandaloneCodeEditor) => {
+  const onEditorMount = (editor: { getAction: (actionId: string) => { run(): void } | null }) => {
     setTimeout(() => {
-      editor.getAction('editor.action.formatDocument').run();
+      const action = editor.getAction('editor.action.formatDocument');
+      if (action) {
+        action.run();
+      }
     }, 100);
   };
 
