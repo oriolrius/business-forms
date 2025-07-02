@@ -13,6 +13,7 @@ export const getStyles = () => {
       display: flex;
       flex-direction: column;
       align-items: stretch;
+      min-height: 52px; /* Minimum height to accommodate buttons + input */
     `,
     decreaseButton: css`
       border-top-right-radius: 0 !important;
@@ -95,6 +96,26 @@ export const getStyles = () => {
         border-radius: 0 !important;
         text-align: center !important;
       }
+    `,
+    inlineFieldVertical: css`
+      /* Target Grafana's InlineField label specifically */
+      & > div:first-child {
+        display: flex !important;
+        align-items: center !important;
+        min-height: 52px !important;
+        text-align: left !important;
+      }
+      
+      /* Target the field container */
+      & > div:last-child {
+        min-height: 52px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      
+      /* Ensure the overall InlineField has proper alignment */
+      display: flex !important;
+      align-items: center !important;
     `,
   };
 };

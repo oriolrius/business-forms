@@ -74,7 +74,9 @@ export const NumInputNoLimitsElement: React.FC<Props> = ({ element, onChange, hi
       tooltip={element.tooltip}
       transparent={!element.title}
       disabled={element.disabled}
-      className={applyLabelStyles(element.labelBackground, element.labelColor)}
+      className={`${applyLabelStyles(element.labelBackground, element.labelColor)} ${
+        isVertical ? styles.inlineFieldVertical : ''
+      }`}
     >
       <div className={isVertical ? styles.containerVertical : styles.container}>
         <Button
